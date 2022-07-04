@@ -1,0 +1,6 @@
+export const place1 = require("./place-1.png")
+export const place2 = require("./place-2.png")
+export const place3 = require("./place-3.png")
+export const place4 = require("./place-4.png")
+export const newsImage = require("./news-img.png")
+export const blankAvatar = require("./avatar.png")

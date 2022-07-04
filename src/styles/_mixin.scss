@@ -1,0 +1,244 @@
+// @import "variables";
+
+// @mixin prefix($property, $value) {
+//   -webkit-#{$property}: #{$value};
+//   -moz-#{$property}: #{$value};
+//   -ms-#{$property}: #{$value};
+//   // -o-#{$property}: #{$value};
+//   #{$property}: #{$value};
+// }
+
+// @mixin hidden {
+//   visibility: hidden;
+//   opacity: 0;
+// }
+
+// @mixin show {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+// @mixin vertical-align($position: absolute) {
+//   position: $position;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// @mixin limit-line-text($line) {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   display: -webkit-box;
+//   -webkit-line-clamp: $line;
+//   -webkit-box-orient: vertical;
+//   box-orient: vertical;
+//   line-clamp: $line;
+//   word-wrap: anywhere;
+// }
+
+// @mixin fixed($left: 0, $right: 0, $bottom: 0, $top: 0) {
+//   position: fixed;
+//   top: $top;
+//   right: $right;
+//   left: $left;
+//   bottom: $bottom;
+// }
+
+// @mixin absolute($left: 0, $right: 0, $bottom: 0, $top: 0) {
+//   position: absolute;
+//   top: $top;
+//   right: $right;
+//   left: $left;
+//   bottom: $bottom;
+// }
+
+// @mixin center-absolute($direction: "both") {
+//   position: absolute;
+
+//   @if $direction == "left" {
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+
+//   @if $direction == "top" {
+//     top: 50%;
+//     right: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+
+//   @if $direction == "both" {
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
+
+// @mixin hide-scrollbar {
+//   -ms-overflow-style: none;
+//   scrollbar-width: none;
+// }
+
+// @mixin flex($justify: flex-start, $alignItem) {
+//   display: flex;
+//   align-items: $alignItem;
+//   justify-content: $justify;
+// }
+
+// @mixin flex-center {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// @mixin text-wrap {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+
+// @mixin style-text($fs, $fw, $line-height, $color) {
+//   font-size: $fs;
+//   font-weight: $fw;
+//   line-height: $line-height;
+//   color: $color;
+// }
+
+// // RESPONSIVE - MIN-WIDTH - ANTD- xs -sm -md - lg -xl - xxl
+// // USE: @include respond(xs-screen) {}
+
+// @mixin responsive($breakpoint) {
+//   // screen < 576px
+//   @if $breakpoint==xs-screen {
+//     @media only screen and (min-width: 400px) {
+//       @content;
+//     }
+//   }
+
+//   // screen ≥ 576px
+//   @if $breakpoint==sm-screen {
+//     @media only screen and (min-width: 576px) {
+//       @content;
+//     }
+//   }
+
+//   // screen ≥ 768px
+//   @if $breakpoint==md-screen {
+//     @media only screen and (min-width: 768px) {
+//       @content;
+//     }
+//   }
+
+//   // screen ≥ 992px
+//   @if $breakpoint==lg-screen {
+//     @media only screen and (min-width: 992px) {
+//       @content;
+//     }
+//   }
+
+//   @if $breakpoint==xl-screen {
+//     @media only screen and (min-width: 1024px) {
+//       @content;
+//     }
+//   }
+
+//   // screen ≥ 1280pxx
+//   @if $breakpoint==2xl-screen {
+//     @media only screen and (min-width: 1280px) {
+//       @content;
+//     }
+//   }
+// }
+
+// @mixin input {
+//   width: 100%;
+//   height: 40px;
+//   outline: none;
+//   padding-inline: 1.4rem;
+//   border: 1px solid $border-color-1;
+//   border-radius: 0.4rem;
+//   @include style-text(400, 1.4rem, 1.4rem, $text-color);
+// }
+
+// %navigation-chevron {
+//   border-color: $datepicker__muted-color;
+//   border-style: solid;
+//   border-width: 3px 3px 0 0;
+//   content: "";
+//   display: block;
+//   height: 9px;
+//   position: absolute;
+//   top: 6px;
+//   width: 9px;
+
+//   &--disabled,
+//   &--disabled:hover {
+//     border-color: $datepicker__navigation-disabled-color;
+//     cursor: default;
+//   }
+// }
+
+// %triangle-arrow {
+//   margin-left: -$datepicker__triangle-size * 0.5;
+//   position: absolute;
+//   width: 0;
+
+//   &::before,
+//   &::after {
+//     box-sizing: content-box;
+//     position: absolute;
+//     border: $datepicker__triangle-size solid transparent;
+//     height: 0;
+//     width: 1px;
+//     content: "";
+//     z-index: -1;
+//     border-width: $datepicker__triangle-size;
+//     left: -$datepicker__triangle-size;
+//   }
+
+//   &::before {
+//     border-bottom-color: $datepicker__border-color;
+//   }
+// }
+
+// %triangle-arrow-up {
+//   @extend %triangle-arrow;
+
+//   top: 0;
+//   margin-top: -$datepicker__triangle-size;
+
+//   &::before,
+//   &::after {
+//     border-top: none;
+//     border-bottom-color: $datepicker__background-color;
+//   }
+
+//   &::after {
+//     top: 0;
+//   }
+
+//   &::before {
+//     top: -1px;
+//     border-bottom-color: $datepicker__border-color;
+//   }
+// }
+
+// %triangle-arrow-down {
+//   @extend %triangle-arrow;
+
+//   bottom: 0;
+//   margin-bottom: -$datepicker__triangle-size;
+
+//   &::before,
+//   &::after {
+//     border-bottom: none;
+//     border-top-color: #fff;
+//   }
+
+//   &::after {
+//     bottom: 0;
+//   }
+
+//   &::before {
+//     bottom: -1px;
+//     border-top-color: $datepicker__border-color;
+//   }
+// }

@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply max-w-[1240px] w-full mx-auto;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .btn {
+    @apply py-[13px] px-[40px] outline-none text-[16px] font-semibold leading-[20px] flex-center rounded-[30px] text-white-color;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary hover:text-gray-color-4 hover:bg-[white] border border-solid border-primary hover:border-gray-color-4 transition-all duration-300;
+  }
+
+  .home-heading {
+    @apply text-primary font-[600] text-[50px] leading-[61px];
+  }
+
+  .normal-text {
+    @apply text-[16px] font-normal text-text-color leading-[26px];
+  }
+
+  .btn-primary-outline {
+    @apply btn-primary bg-white-color border-gray-color-4 text-gray-color-4 hover:text-white-color hover:border-[transparent] hover:bg-primary;
+  }
+
+  .absolute-0 {
+    @apply absolute left-[0] right-[0] bottom-[0] top-[0];
+  }
+
+  .absolute-center {
+    @apply absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .absolute-vertical {
+    @apply absolute top-[50%] transform -translate-y-1/2;
+  }
+
+  .absolute-horizontal {
+    @apply absolute left-[50%] transform -translate-x-1/2;
+  }
+
+  .form-item {
+    @apply mb-[12px];
+  }
+
+  .form-err-msg {
+    @apply text-[12px] text-error leading-[24px] font-normal;
+  }
+
+  .form-input {
+    @apply py-12 px-[15px] rounded-[10px] border border-solid border-gray-color-2 h-[52px] w-full outline-none text-14 font-medium;
+  }
+
+  .form-textarea {
+    @apply form-input h-[unset];
+  }
+
+  .form-input-err {
+    @apply border-error;
+  }
+
+  .form-label {
+    @apply text-[14px] text-gray-color-4 leading-[26px] font-medium mb-[4px] inline-block;
+  }
+
+  .form-date {
+    @apply form-input py-[0];
+  }
+
+  .form-date-err {
+    @apply border-error;
+  }
+
+  .btn-disabled-clickable {
+    @apply opacity-80 cursor-default hover:bg-primary hover:text-white-color;
+  }
+
+  .btn-disabled {
+    @apply bg-disabled pointer-events-none text-gray-color-1 border-none;
+  }
+
+  .btn-disabled-2 {
+    @apply btn-disabled;
+  }
+
+  .content-container {
+    @apply sm:max-w-modal-width w-full mx-auto;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+  width: 64px !important;
+  height: 64px !important;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+
+  &::after {
+    font-size: 18px !important;
+    color: #373737;
+  }
+}
+
+.custom-swiper {
+  .swiper-slide {
+    width: 20vw !important;
+  }
+}
+
+.my-otp-input {
+  & > div {
+    // width: 300px;
+    width: fit-content;
+    height: 52px;
+
+    & > div {
+      border-radius: 8px;
+      margin-right: 0.6rem;
+      height: 100%;
+      width: 52px;
+      border: 1px solid #bfbfbf;
+
+      & input {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 8px;
+        font-weight: 500;
+      }
+    }
+
+    & > div:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.form-date {
+  & .rdt {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+
+    & .form-control {
+      width: 100%;
+      height: 100%;
+      outline: none;
+    }
+
+    & .rdtPicker {
+      border-radius: 8px;
+      // border: 1px solid rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+}
+
+.form-select {
+  & .css-b62m3t-container {
+    width: 100%;
+    height: 52px;
+    border-radius: 8px;
+
+    & .css-1s2u09g-control {
+      height: 52px;
+      border-radius: 8px;
+      padding-inline: 8px;
+      border: 1px solid #bfbfbf;
+    }
+
+    & .css-1pahdxg-control {
+      height: 52px;
+      border-radius: 8px;
+      box-shadow: none;
+      padding-inline: 8px;
+      border: 1px solid #bfbfbf;
+    }
+
+    & .css-1okebmr-indicatorSeparator {
+      display: none;
+    }
+
+    & .css-1n7v3ny-option,
+    & .css-yt9ioa-option,
+    & .css-9gakcf-option {
+      padding-block: 0.6rem;
+    }
+
+    & .css-yt9ioa-option,
+    & .css-1n7v3ny-option {
+      padding-block: 10px;
+      font-weight: 500;
+
+      &:hover {
+        padding-block: 10px;
+        font-weight: 500;
+      }
+    }
+
+    & .css-qc6sy-singleValue {
+      font-weight: 500;
+    }
+  }
+
+  &-error {
+    & .css-1s2u09g-control {
+      border-color: #ff3b30 !important;
+    }
+
+    & .css-1pahdxg-control {
+      border-color: #ff3b30 !important;
+    }
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #f2f2f2;
+  }
+  100% {
+    background-color: #dad8d8;
+  }
+}
+
+.skeleton {
+  animation: skeleton-loading 0.8s linear infinite alternate;
+}
