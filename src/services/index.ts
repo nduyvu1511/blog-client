@@ -2,7 +2,7 @@ import { getFromLocalStorage } from "@/helper"
 import axios from "axios"
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   method: "POST",
   headers: {
     Accept: "application/json",
