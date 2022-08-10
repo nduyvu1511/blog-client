@@ -1,8 +1,10 @@
-import { setToLocalStorage } from "@/helper"
+import { setToLocalStorage, toggleBodyOverflow } from "@/helper"
 import { useAttachment, useUploadAttachment } from "@/hooks"
 import dynamic from "next/dynamic"
 import { useMemo, useRef, useState } from "react"
 import "react-quill/dist/quill.snow.css"
+import { BlogDetail } from "../blog"
+import { Modal } from "../modal"
 
 const ReactQuill: any = dynamic(
   async () => {
@@ -45,6 +47,7 @@ const BlogEditor = ({ onSubmit, defaultValue, btnLabel }: blogEditorProps) => {
   const { getBase64Images } = useAttachment({ limit: 10 })
   const { uploadImage } = useUploadAttachment()
   const [text, setText] = useState<string>(defaultValue || "")
+  const [showQuickView, setShowQuickView] = useState<boolean>(false)
 
   const handleSetText = (val: string) => {
     setToLocalStorage("blog_form_content", val)
@@ -115,7 +118,35 @@ const BlogEditor = ({ onSubmit, defaultValue, btnLabel }: blogEditorProps) => {
         >
           {btnLabel || "Tiếp tục"}
         </button>
+
+        {text ? (
+          <button
+            onClick={() => {
+              setShowQuickView(true)
+              toggleBodyOverflow("hidden")
+            }}
+            className={`text-base text-primary font-semibold ${
+              !text ? "btn-disabled" : ""
+            } absolute right-24`}
+          >
+            {btnLabel || "Xem trước"}
+          </button>
+        ) : null}
       </div>
+
+      {showQuickView ? (
+        <Modal
+          fullScreen
+          onClose={() => {
+            setShowQuickView(false)
+            toggleBodyOverflow("unset")
+          }}
+        >
+          <div className="h-screen overflow-y-auto news-container">
+            <BlogDetail content={text} />
+          </div>
+        </Modal>
+      ) : null}
     </div>
   )
 }

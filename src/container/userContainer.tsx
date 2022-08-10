@@ -30,7 +30,7 @@ const UserContainer = ({ children }: { children: ReactNode }) => {
             </div>
           </div>
 
-          <div className="flex items-center justify-end px-24 py-[24px] max-w-[200px] w-full">
+          <div className="flex items-center justify-end px-24 py-[24px] max-w-[200px] z-[1000] w-full">
             <UserInfo />
           </div>
         </div>

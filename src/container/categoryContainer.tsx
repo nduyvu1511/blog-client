@@ -23,7 +23,7 @@ const CategoryContainer = ({ children, onClickAddBtn }: CategoryContainerProps) 
               </li>
             </div>
           </div>
-          <div className="flex items-center justify-end px-24 py-[24px] max-w-[200px] w-full">
+          <div className="flex items-center justify-end px-24 py-[24px] z-[1000] max-w-[200px] w-full">
             <UserInfo />
           </div>
         </div>
@@ -34,4 +34,3 @@ const CategoryContainer = ({ children, onClickAddBtn }: CategoryContainerProps) 
 }
 
 export { CategoryContainer }
-

@@ -36,7 +36,7 @@ export const useBlog = (shouldFetch = false): Res => {
             .catch((err) => console.log(err))
       : null,
     {
-      dedupingInterval: 20000,
+      dedupingInterval: 2000,
       revalidateOnFocus: false,
       shouldRetryOnError: false,
     }

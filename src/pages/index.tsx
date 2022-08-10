@@ -71,7 +71,7 @@ const Home = () => {
             <ul>
               {isValidating ? (
                 <>
-                  {Array.from({ length: 6 }).map((_, index) => (
+                  {Array.from({ length: 4 }).map((_, index) => (
                     <BlogItem key={index} blog={null as any} isLoading={true} />
                   ))}
                 </>
@@ -135,7 +135,7 @@ const Home = () => {
             </div>
           ) : (
             <div className="h-screen overflow-y-auto news-container">
-              <BlogDetail blog={blogDetail} />
+              <BlogDetail content={blogDetail.content} />
             </div>
           )}
         </Modal>

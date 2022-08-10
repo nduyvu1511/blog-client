@@ -30,7 +30,7 @@ const PostContainer = ({ children }: { children: ReactNode }) => {
             </div>
           </div>
 
-          <div className="flex items-center justify-end px-24 py-[24px] max-w-[200px] w-full">
+          <div className="flex items-center justify-end px-24 py-[24px] z-[1000] max-w-[200px] w-full">
             <UserInfo />
           </div>
         </div>
@@ -41,4 +41,3 @@ const PostContainer = ({ children }: { children: ReactNode }) => {
 }
 
 export { PostContainer }
-
