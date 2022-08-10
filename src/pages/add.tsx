@@ -28,7 +28,7 @@ const AddNews = () => {
   return (
     <>
       <PostContainer>
-        <div className="py-24">
+        <div className="my-24">
           <BlogEditor
             defaultValue={getFromLocalStorage("blog_form_content")}
             onSubmit={(content) => {

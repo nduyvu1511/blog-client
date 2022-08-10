@@ -51,7 +51,7 @@ const Modal = ({
           </button>
         )}
 
-        <div className={`${fullScreen ? "max-h-screen" : "sm:max-h-[590px]"} flex-1 relative`}>
+        <div className={`${fullScreen ? "max-h-screen" : "sm:max-h-[570px]"} flex-1 relative`}>
           {children}
         </div>
       </div>

@@ -98,7 +98,7 @@ const BlogEditor = ({ onSubmit, defaultValue, btnLabel }: blogEditorProps) => {
 
   return (
     <div className="">
-      <div className="mb-[24px]">
+      <div className="pb-[64px]">
         <ReactQuill
           forwardedRef={quillRef}
           value={text}
@@ -108,7 +108,7 @@ const BlogEditor = ({ onSubmit, defaultValue, btnLabel }: blogEditorProps) => {
         />
       </div>
 
-      <div className="flex-center">
+      <div className="flex-center fixed bottom-0 p-12 left-[250px] right-0 bg-white-color">
         <button
           onClick={() => onSubmit && onSubmit(text)}
           className={`btn-primary ${!text ? "btn-disabled" : ""}`}

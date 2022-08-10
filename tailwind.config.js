@@ -92,6 +92,7 @@ module.exports = {
     },
     gridTemplateColumns: {
       "main-container": "250px 1fr",
+      "editor-grid": "1fr 280px",
     },
     boxShadow: {
       box: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",

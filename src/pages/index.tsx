@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <>
       <PostContainer>
-        <div className="flex items-center py-[12px]">
+        <div className="flex items-center py-[24px]">
           <h1 className="text-16 py-[10px] font-semibold mr-[12px]">Lọc theo danh mục</h1>
           <div className="form-select w-[300px]">
             <Select
@@ -134,7 +134,7 @@ const Home = () => {
               <SpinnerIcon className="animate-spin" />
             </div>
           ) : (
-            <div className="h-full overflow-y-auto">
+            <div className="h-screen overflow-y-auto news-container">
               <BlogDetail blog={blogDetail} />
             </div>
           )}
